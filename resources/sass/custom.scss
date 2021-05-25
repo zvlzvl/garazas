@@ -1,0 +1,19 @@
+fieldset.sort {
+    border: 1px solid grey;
+    padding: 5px, 20px;
+    margin: 15px 0;
+    legend {
+        width: auto;
+        display: inline-block;
+        padding: 0, 5px;
+    }
+    .inputs{
+        padding:0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        * {
+            margin: 0 5px;
+        }
+    }
+}
