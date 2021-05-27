@@ -9,10 +9,12 @@
 
                <div class="card-body">
                 <form method="POST" action="{{route('mechanic.store')}}">
-                    Name: <input type="text" name="mechanic_name" value="{{old('mechanic_name')}}">
-                    Surname: <input type="text" name="mechanic_surname" value="{{old('mechanic_surname')}}">
+                    <label>Name</label>
+                    <input type="text" name="mechanic_name" value="{{old('mechanic_name')}}" placeholder="Your name">
+                    <label>Name</label>
+                    <input type="text" name="mechanic_surname" value="{{old('mechanic_surname')}}" placeholder="Your surname">
                     @csrf
-                    <button type="submit">ADD</button>
+                    <button type="submit"> ADD </button>
                  </form>
                </div>
            </div>

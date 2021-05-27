@@ -7,7 +7,7 @@
            <div class="card">
                <div class="card-header">
                     <h1>Trucks List</h1>
-                    <form action="{{route('truck.index')}}" method="GET"> 
+                    <form class="fieldset" action="{{route('truck.index')}}" method="GET"> 
                         {{-- prideti route --}}
                         <fieldset class="sort">
                             <legend>Sort by:</legend>
@@ -44,8 +44,8 @@
                             </fieldset>
                         
 
-                    <button>Sort</button>
-                    <button><a href="{{route('truck.index')}}">Reset</a></button>
+                    <button>SORT</button>
+                    <button><a href="{{route('truck.index')}}">RESET</a></button>
                     </form>
 
 

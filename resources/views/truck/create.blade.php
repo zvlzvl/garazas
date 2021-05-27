@@ -44,7 +44,7 @@
                         </select>
                     </div>
                     @csrf
-                    <button type="submit">ADD</button>
+                    <button class="add" type="submit">ADD</button>
                  </form>
                </div>
            </div>
