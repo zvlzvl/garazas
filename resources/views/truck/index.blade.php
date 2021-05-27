@@ -43,7 +43,6 @@
                                 </div>   
                             </fieldset>
                         
-
                     <button>SORT</button>
                     <button><a href="{{route('truck.index')}}">RESET</a></button>
                     </form>
@@ -58,6 +57,7 @@
                 <span>{{$truck->make_year}}</span>
                 <form method="POST" action="{{route('truck.destroy', [$truck])}}">
                  @csrf
+                 <button><a href="{{route('truck.show',[$truck])}}">SHOW</a></button>
                  <button type="submit"><a href="{{route('truck.edit',[$truck])}}">EDIT</a></button>
                  <button type="submit">DELETE</button>
                 </form>

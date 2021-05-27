@@ -6,6 +6,7 @@ use App\Models\Truck;
 use Illuminate\Http\Request;
 use App\Models\Mechanic;
 use Validator;
+use PDF;
 
 class TruckController extends Controller
 {
@@ -150,7 +151,7 @@ class TruckController extends Controller
      */
     public function show(Truck $truck)
     {
-        //
+        return view('truck.show', ['truck' => $truck]);
     }
 
     /**
@@ -221,5 +222,11 @@ class TruckController extends Controller
     {
         $truck->delete();
         return redirect()->route('truck.index')->with('success_message', 'Success deleted!');
+    }
+
+    public function pdf(Truck $truck)
+    {
+        $pdf = PDF::loadView('truck.pdf', ['truck' => $truck]);
+        return $pdf->download('truck-id'.$truck->id.'.pdf');
     }
 }
