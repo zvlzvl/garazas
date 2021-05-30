@@ -37,7 +37,7 @@
                         <select class="form-select" name="mechanic_id">
                             <option value="0">Select Mechanic</option>
                              @foreach ($mechanics as $mechanic)
-                            <option value="{{$mechanic->id}}" @if ($mechanic->id == old('master_id', 0)) selected @endif>
+                            <option value="{{$mechanic->id}}" @if ($mechanic->id == old('mechanic_id', 0)) selected @endif>
                                 {{$mechanic->name}} {{$mechanic->surname}}
                             </option>
                         @endforeach
