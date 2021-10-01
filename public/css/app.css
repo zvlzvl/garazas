@@ -10148,6 +10148,32 @@ input[type=radio]:after {
 }
 
 input[type=radio]:checked:after {
-  background-color: #002761;
+  background-color: #094094;
   border: 2px solid #bf9b30;
+}
+
+.list-img {
+  width: 50%;
+  max-height: 150px;
+}
+.list-img img {
+  height: 150px;
+  width: auto;
+}
+
+.line {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #bf9b30;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 10px;
+  background: linear-gradient(90deg, #bf9b30 45%, #0648aa 60%);
+  z-index: -1;
+  left: 15px;
+  top: 39px;
 }

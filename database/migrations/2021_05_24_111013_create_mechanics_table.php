@@ -17,6 +17,7 @@ class CreateMechanicsTable extends Migration
             $table->id();
             $table->string('name', 64);
             $table->string('surname', 64);
+            $table->string('portret', 200)->nullable();
             $table->timestamps();
         });
     }

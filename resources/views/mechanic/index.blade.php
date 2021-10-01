@@ -5,18 +5,34 @@
    <div class="row justify-content-center">
        <div class="col-md-8">
            <div class="card">
-               <div class="card-header">Mechanic List</div>
-
+               <div class="card-header">
+                   <h1>Mechanic List</h1>
+               </div>
                <div class="card-body">
                 @foreach ($mechanics as $mechanic)
-
-                <h6>{{$mechanic->name}} {{$mechanic->surname}}</h6>
+                <div>
+                    <div>
+                        <h4>{{$mechanic->name}} {{$mechanic->surname}}</h4>
+                    </div>
+                    @if($mechanic->portret)
+                    <div class="list-img">
+                        <img src="{{$mechanic->portret}}" alt="{{$mechanic->name}} {{$mechanic->surname}}">
+                    </div>
+                    @else
+                    <div class="list-img">
+                        <img src="{{asset('portrets/person_blank.png')}}" alt="{{$mechanic->name}} {{$mechanic->surname}}">
+                    </div>
+                    @endif
+                    
+                </div>
                 <form method="POST" action="{{route('mechanic.destroy', $mechanic)}}">
                  @csrf
-                 <button type="submit"> <a href="{{route('mechanic.edit',[$mechanic])}}">EDIT</a></button>
-                 <button type="submit">DELETE</button>
+                    <button type="submit"> <a href="{{route('mechanic.edit',[$mechanic])}}">EDIT</a></button>
+                    <button type="submit">DELETE</button>
                 </form>
-                <br>
+                <div class="line">
+
+                </div>
               @endforeach
                </div>
            </div>
